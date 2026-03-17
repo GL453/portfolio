@@ -1,0 +1,363 @@
+
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+
+        .loadingsection{
+            width: 100%;
+            height: 100vh;
+            background-color: #F4F4F4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loading-wrapper{
+          /* width: 18vw;
+          height: 18vw;
+          border: 1px solid red; */
+          animation: scaleAnim 1.8s ease-in-out infinite;
+          will-change: transform;
+        }
+        @keyframes scaleAnim {
+        
+          0%{
+            transform: scale(0.92);
+          }
+      
+          50%{
+            transform: scale(1.08);
+          }
+      
+          100%{
+            transform: scale(0.92);
+          }
+      
+        }
+        .loading {
+          width: 18vw;
+          height: 18vw;
+
+          border-radius: 50%;
+          margin: auto;
+          content: "Loading...";
+          position: relative;
+
+          animation: rotate 12s linear infinite;
+          will-change: transform;
+        }
+        @keyframes rotate {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+.dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1.2vw;
+  height: 1.2vw;
+  margin-left: -0.6vw;
+  margin-top: -0.6vw;
+  will-change: transform;
+  transform-origin: center 9.6vw;
+}
+
+.dot:nth-child(1) {
+  transform: rotate(0deg);
+}
+.dot:nth-child(1)::before, .dot:nth-child(1)::after {
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  transform: rotate(10deg);
+}
+.dot:nth-child(2)::before, .dot:nth-child(2)::after {
+  animation-delay: -0.3333333333s;
+}
+.dot:nth-child(3) {
+  transform: rotate(20deg);
+}
+.dot:nth-child(3)::before, .dot:nth-child(3)::after {
+  animation-delay: -0.6666666667s;
+}
+.dot:nth-child(4) {
+  transform: rotate(30deg);
+}
+.dot:nth-child(4)::before, .dot:nth-child(4)::after {
+  animation-delay: -1s;
+}
+.dot:nth-child(5) {
+  transform: rotate(40deg);
+}
+.dot:nth-child(5)::before, .dot:nth-child(5)::after {
+  animation-delay: -1.3333333333s;
+}
+.dot:nth-child(6) {
+  transform: rotate(50deg);
+}
+.dot:nth-child(6)::before, .dot:nth-child(6)::after {
+  animation-delay: -1.6666666667s;
+}
+.dot:nth-child(7) {
+  transform: rotate(60deg);
+}
+.dot:nth-child(7)::before, .dot:nth-child(7)::after {
+  animation-delay: -2s;
+}
+.dot:nth-child(8) {
+  transform: rotate(70deg);
+}
+.dot:nth-child(8)::before, .dot:nth-child(8)::after {
+  animation-delay: -2.3333333333s;
+}
+.dot:nth-child(9) {
+  transform: rotate(80deg);
+}
+.dot:nth-child(9)::before, .dot:nth-child(9)::after {
+  animation-delay: -2.6666666667s;
+}
+.dot:nth-child(10) {
+  transform: rotate(90deg);
+}
+.dot:nth-child(10)::before, .dot:nth-child(10)::after {
+  animation-delay: -3s;
+}
+.dot:nth-child(11) {
+  transform: rotate(100deg);
+}
+.dot:nth-child(11)::before, .dot:nth-child(11)::after {
+  animation-delay: -3.3333333333s;
+}
+.dot:nth-child(12) {
+  transform: rotate(110deg);
+}
+.dot:nth-child(12)::before, .dot:nth-child(12)::after {
+  animation-delay: -3.6666666667s;
+}
+.dot:nth-child(13) {
+  transform: rotate(120deg);
+}
+.dot:nth-child(13)::before, .dot:nth-child(13)::after {
+  animation-delay: -4s;
+}
+.dot:nth-child(14) {
+  transform: rotate(130deg);
+}
+.dot:nth-child(14)::before, .dot:nth-child(14)::after {
+  animation-delay: -4.3333333333s;
+}
+.dot:nth-child(15) {
+  transform: rotate(140deg);
+}
+.dot:nth-child(15)::before, .dot:nth-child(15)::after {
+  animation-delay: -4.6666666667s;
+}
+.dot:nth-child(16) {
+  transform: rotate(150deg);
+}
+.dot:nth-child(16)::before, .dot:nth-child(16)::after {
+  animation-delay: -5s;
+}
+.dot:nth-child(17) {
+  transform: rotate(160deg);
+}
+.dot:nth-child(17)::before, .dot:nth-child(17)::after {
+  animation-delay: -5.3333333333s;
+}
+.dot:nth-child(18) {
+  transform: rotate(170deg);
+}
+.dot:nth-child(18)::before, .dot:nth-child(18)::after {
+  animation-delay: -5.6666666667s;
+}
+.dot:nth-child(19) {
+  transform: rotate(180deg);
+}
+.dot:nth-child(19)::before, .dot:nth-child(19)::after {
+  animation-delay: -6s;
+}
+.dot:nth-child(20) {
+  transform: rotate(190deg);
+}
+.dot:nth-child(20)::before, .dot:nth-child(20)::after {
+  animation-delay: -6.3333333333s;
+}
+.dot:nth-child(21) {
+  transform: rotate(200deg);
+}
+.dot:nth-child(21)::before, .dot:nth-child(21)::after {
+  animation-delay: -6.6666666667s;
+}
+.dot:nth-child(22) {
+  transform: rotate(210deg);
+}
+.dot:nth-child(22)::before, .dot:nth-child(22)::after {
+  animation-delay: -7s;
+}
+.dot:nth-child(23) {
+  transform: rotate(220deg);
+}
+.dot:nth-child(23)::before, .dot:nth-child(23)::after {
+  animation-delay: -7.3333333333s;
+}
+.dot:nth-child(24) {
+  transform: rotate(230deg);
+}
+.dot:nth-child(24)::before, .dot:nth-child(24)::after {
+  animation-delay: -7.6666666667s;
+}
+.dot:nth-child(25) {
+  transform: rotate(240deg);
+}
+.dot:nth-child(25)::before, .dot:nth-child(25)::after {
+  animation-delay: -8s;
+}
+.dot:nth-child(26) {
+  transform: rotate(250deg);
+}
+.dot:nth-child(26)::before, .dot:nth-child(26)::after {
+  animation-delay: -8.3333333333s;
+}
+.dot:nth-child(27) {
+  transform: rotate(260deg);
+}
+.dot:nth-child(27)::before, .dot:nth-child(27)::after {
+  animation-delay: -8.6666666667s;
+}
+.dot:nth-child(28) {
+  transform: rotate(270deg);
+}
+.dot:nth-child(28)::before, .dot:nth-child(28)::after {
+  animation-delay: -9s;
+}
+.dot:nth-child(29) {
+  transform: rotate(280deg);
+}
+.dot:nth-child(29)::before, .dot:nth-child(29)::after {
+  animation-delay: -9.3333333333s;
+}
+.dot:nth-child(30) {
+  transform: rotate(290deg);
+}
+.dot:nth-child(30)::before, .dot:nth-child(30)::after {
+  animation-delay: -9.6666666667s;
+}
+.dot:nth-child(31) {
+  transform: rotate(300deg);
+}
+.dot:nth-child(31)::before, .dot:nth-child(31)::after {
+  animation-delay: -10s;
+}
+.dot:nth-child(32) {
+  transform: rotate(310deg);
+}
+.dot:nth-child(32)::before, .dot:nth-child(32)::after {
+  animation-delay: -10.3333333333s;
+}
+.dot:nth-child(33) {
+  transform: rotate(320deg);
+}
+.dot:nth-child(33)::before, .dot:nth-child(33)::after {
+  animation-delay: -10.6666666667s;
+}
+.dot:nth-child(34) {
+  transform: rotate(330deg);
+}
+.dot:nth-child(34)::before, .dot:nth-child(34)::after {
+  animation-delay: -11s;
+}
+.dot:nth-child(35) {
+  transform: rotate(340deg);
+}
+.dot:nth-child(35)::before, .dot:nth-child(35)::after {
+  animation-delay: -11.3333333333s;
+}
+.dot:nth-child(36) {
+  transform: rotate(350deg);
+}
+.dot:nth-child(36)::before, .dot:nth-child(36)::after {
+  animation-delay: -11.6666666667s;
+}
+.dot {
+  perspective: 100px;
+  transform-style: preserve-3d;
+}
+.dot::before, .dot::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.dot::before {
+  background-color: #FEC5FB;
+  top: -100%;
+  animation: moveblack 2s infinite linear;
+}
+@keyframes moveblack {
+  0% {
+    animation-timing-function: ease-in;
+  }
+  25% {
+    transform: translate3d(0, 100%, 1.2vw);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translate3d(0, 200%, 0);
+    animation-timing-function: ease-in;
+  }
+  75% {
+    transform: translate3d(0, 100%, 1.2vw);
+    animation-timing-function: ease-out;
+  }
+}
+.dot::after {
+  background-color: #003cc5;
+  top: 100%;
+  animation: movewhite 2s infinite linear;
+}
+@keyframes movewhite {
+  0% {
+    animation-timing-function: ease-in;
+  }
+  25% {
+    transform: translate3d(0, -100%, -1.2vw);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translate3d(0, -200%, 0);
+    animation-timing-function: ease-in;
+  }
+  75% {
+    transform: translate3d(0, -100%, 1.2vw);
+    animation-timing-function: ease-out;
+  }
+}        
+.fade-out{
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+.loading-text{
+  position:absolute;
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  font-size:1.8vw;
+  font-family:Arial,sans-serif;
+  font-weight:200;
+  color:#000;
+  text-shadow:
+    0 1px 0 #ddd,
+    0 2px 0 #ddd,
+    0 3px 0 #ddd,
+    0 4px 0 #ddd,
+    0 5px 0 #ddd,
+    0 6px 0 #ddd,
+    0 7px 0 #ddd,
+    0 8px 0 #ddd,
+    0 20px 30px rgba(0,0,0,0.2);
+}

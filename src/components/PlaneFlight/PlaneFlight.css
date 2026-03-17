@@ -1,0 +1,54 @@
+
+
+html, body {
+  overflow-x: hidden; 
+}
+
+
+.scroll-smooth-breeze {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  perspective: 1200px;
+  transform-style: preserve-3d;
+
+  overflow: visible;
+}
+
+/* 飞机 */
+.scroll-smooth-breeze__plane {
+  width: 18vw;     
+  height: 10vw;
+
+  position: absolute;
+  top: 40%;
+
+  transform-style: preserve-3d;
+  transform-origin: center center;
+
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* 路径容器 */
+.path-container {
+  position: absolute;
+
+  top: 40%;
+  left: 0;
+
+  width: 100%;
+  height: calc(100vw * 131 / 1657); /* 按SVG比例计算高度 */
+
+  overflow: hidden;
+
+  transform: translateY(-50%);
+}
+
+/* SVG路径响应式 */
+.path-container svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

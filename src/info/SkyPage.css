@@ -1,0 +1,122 @@
+/* 整个页面容器 */
+.sky-page {
+  position: relative;       
+  min-height: 100vh;       
+  overflow: hidden;         
+}
+
+/* 飞机外层容器 */
+.skyplane-wrapper {
+  position: absolute;       
+  transform: translate(-50%, -50%);
+}
+
+/* 飞机本身 */
+.skyplane {
+  width: 24vw;
+  cursor: pointer;
+
+  /* 漂浮动画 */
+  animation: floatPlane 6s ease-in-out infinite;
+  transition: transform 0.4s ease;
+  position: relative;
+}
+.skyplane-label {
+  position: absolute;
+  top: -60%; 
+  left: -40%;
+ 
+  margin-top: 8px;
+
+  pointer-events: none;
+  white-space: nowrap;
+
+  /* 文字样式 */
+  font-size: 2vw;
+  font-family: Arial, sans-serif;
+  font-weight: 400;  /* 字体稍粗一点，更清晰 */
+  color: #fff;       /* 如果背景是天空，白色更突出 */
+
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.3),
+    0 2px 4px rgba(0,0,0,0.2);
+
+  z-index: 10;
+}
+/* 鼠标悬浮放大 */
+.skyplane:hover {
+  transform: scale(1.1);
+}
+
+/* 飞机漂浮动画 */
+@keyframes floatPlane {
+  0% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-12px); }
+  100% { transform: translate(-50%, -50%) translateY(0); }
+}
+
+/* 遮罩 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 40; /* 面板下面 */
+}
+
+/* 左侧面板 */
+.left-panel {
+  position: fixed;
+  top: 0;
+  left: -82vw; /* 初始隐藏 */
+  width: 80vw;
+  height: 100vh;
+  background-color: #f7f7f5;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  padding: 24px;
+  transition: left 0.4s ease;
+  z-index: 50;
+  overflow-y: auto;
+}
+
+/* 面板激活状态 */
+.left-panel.active {
+  left: 0;
+}
+
+/* 右上角关闭按钮 */
+.close-btn {
+  padding: 0 8px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 1px solid #333;
+  background: none;
+  font-size: 3vw;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+
+
+.fly-out-right {
+  animation: flyOutRight 1.8s linear forwards;
+}
+
+@keyframes flyOutRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw); /* 飞出屏幕右侧 */
+  }
+}
+

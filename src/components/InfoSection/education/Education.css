@@ -1,0 +1,164 @@
+.edu-sec {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    background-color: #f7f7f5;
+    font-family: Arial, sans-serif;
+    color: #111;
+}
+
+/* canvas 层 */
+.canvas-container-sec {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* UI 层 */
+.ui-layer-sec {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* logo */
+.edu-logo-sec {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 2vw;
+    z-index: 10;
+}
+.edu-logo-sec::after{
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: #9055ff;
+  animation: underlineGrow 1s ease forwards;
+}
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* slide 内容 */
+.edu-sld {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    width: 30%;
+    max-width: 450px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease-out;
+
+    pointer-events: auto;
+}
+
+.edu-sld.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 标题 */
+.edu-title-sec {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.8vw;
+    margin: 0;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #0d0d0d;
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-title-main-sec {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+    position: relative;
+}
+
+.edu-title-main-sec::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px; 
+    width: 60%; 
+    height: 2px;
+    background-color: #9055ff;
+}
+
+.edu-title-sub-sec {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid #9055ff;
+    display: inline-block;
+    font-size: 1.2vw;
+    line-height: 1.4rem;
+    color: #222;
+}
+
+/* 地点 / 编号 */
+.edu-tag-sec {
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* 描述 */
+.edu-desc-sec {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #444;
+    margin-bottom: 3rem;
+}
+
+/* 信息区 */
+.edu-meta-sec {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    row-gap: 0.8rem;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1.5rem;
+}
+
+.edu-meta__label-sec {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #555;
+    align-self: center;
+}
+
+.edu-meta__value-sec {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #222;
+}
+
+/* 滚动提示 */
+.edu-scroll-hint-sec {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #aaa;
+}

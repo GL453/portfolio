@@ -1,0 +1,102 @@
+
+.carousel3d {
+  touch-action: none;
+  overflow: hidden;
+  display: flex;
+
+  perspective: 1000px;
+  transform-style: preserve-3d;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+.carousel3d__drag {
+  position: relative;
+  display: flex;
+  margin: auto;
+
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+}
+
+.carousel3d__spin {
+  position: relative;
+  display: flex;
+
+  transform-style: preserve-3d;
+}
+
+/* 图片 */
+.carousel3d__drag img,
+.carousel3d__drag video {
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+
+  box-shadow: 0 0 8px #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    user-select: none;        /* 主流浏览器通用 */
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+}
+
+.carousel3d__drag img:hover,
+.carousel3d__drag video:hover {
+  box-shadow: 0 0 15px #fffd;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+}
+
+/* 标题 */
+.carousel3d__title {
+  font-family: Serif;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+
+  transform: translate(-50%, -50%) rotateX(90deg);
+    user-select: none;        /* 主流浏览器通用 */
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+}
+
+/* 地面 */
+.carousel3d__ground {
+  width:100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) rotateX(90deg);
+
+  background: radial-gradient(circle, #9993, transparent);
+    user-select: none;        /* 主流浏览器通用 */
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+}
+
+/* 动画 */
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+@keyframes spinRevert {
+  from { transform: rotateY(360deg); }
+  to   { transform: rotateY(0deg); }
+}

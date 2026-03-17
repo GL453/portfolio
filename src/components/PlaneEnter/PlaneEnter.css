@@ -1,0 +1,108 @@
+
+.plane-enter-container{
+
+  width:100%;
+  height:100vh;
+
+position:absolute;
+inset:0;
+
+
+}
+.plane-enter-wrapper {
+  width: 20vw;
+  height: 12vw;
+  animation: pulse 6s ease-in-out infinite;
+  animation-delay: 2.4s; 
+}
+
+@keyframes pulse {
+  0% {  transform: scale(1);}
+  10% { transform: scale(1.1); }
+  20% { transform: scale(1); }
+  30%{  transform: scale(1.1); }
+  40% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+/* 飞机 */
+.plane-enter{
+
+  width:18vw;
+
+  position:absolute;
+
+  left:10vw;
+  bottom:-15vh;
+
+
+  will-change: transform;
+
+  animation: flyIn 0.8s linear forwards;
+  cursor: pointer;
+}
+
+@keyframes flyIn{
+
+  0%{opacity:0;
+    transform: translate(5vw,-5vh) rotateX(25deg) rotateZ(-45deg);
+  }
+
+  10%{
+    transform: translate(5vw,-5vh) rotateX(25deg) rotateZ(-40deg);
+  }
+
+  20%{
+    transform: translate(10vw,-10vh) rotateX(25deg) rotateZ(-35deg);
+    opacity:1;
+  }
+
+  50%{
+    transform: translate(15vw,-25vh) rotateX(25deg) rotateZ(-30deg);
+  }
+
+  80%{
+    transform: translate(20vw,-35vh) rotateX(25deg) rotateZ(-25deg);
+  }
+
+  100%{
+    transform: translate(30vw,-45vh) rotateX(25deg) rotateZ(-20deg);
+    opacity:1; pointer-events: auto;
+  }
+
+}
+
+
+
+.fly-out{
+
+  width:18vw;
+
+  position:absolute;
+  left:10vw;
+  bottom:-15vh;
+
+  will-change: transform;
+  animation: planeFlyOut 1.2s linear forwards;
+  cursor: pointer;
+
+}
+
+@keyframes planeFlyOut {
+
+  0%{
+     transform: translate(30vw,-45vh) rotateX(25deg) rotateZ(-20deg);
+  }
+
+  30%{
+     transform: translate(50vw,-45vh) rotateX(25deg) rotateZ(-20deg);
+  }
+
+  60%{
+    transform: translate(70vw,-45vh) rotateX(25deg) rotateZ(-20deg);
+  }
+
+  100%{
+    transform: translate(90vw,-45vh) rotateX(25deg) rotateZ(-20deg);
+  }
+
+}

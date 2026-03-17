@@ -1,0 +1,98 @@
+
+    .carousel-container {
+  width: 120%;
+  height: 30vw;
+  overflow: hidden;
+  perspective: 2000px;
+  display: flex;
+  justify-content: center;
+
+
+ 
+}
+
+.inner-container {
+  transform-style: preserve-3d;
+  transform: translateZ(5vh) rotateX(-20deg);
+  width: 40%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+.cylinder {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out;
+ 
+}
+
+/* 卡片分布（6个 → 60deg） */
+.card:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
+.card:nth-child(2) { transform: rotateY(60deg) translateZ(300px); }
+.card:nth-child(3) { transform: rotateY(120deg) translateZ(300px); }
+.card:nth-child(4) { transform: rotateY(180deg) translateZ(300px); }
+.card:nth-child(5) { transform: rotateY(240deg) translateZ(300px); }
+.card:nth-child(6) { transform: rotateY(300deg) translateZ(300px); }
+
+.card {
+    cursor: pointer;
+  position: absolute;
+  width: 14vw;
+  height: 18vw;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+    user-select: none;        /* 主流浏览器通用 */
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    user-select: none;        /* 主流浏览器通用 */
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+}
+
+/* 正面图片 */
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    user-select: none;        /* 主流浏览器通用 */
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+}
+
+/* 背面 */
+.back {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 1.2rem;
+    user-select: none;        /* 主流浏览器通用 */
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+}
+
+/* 立体厚度 */
+.left, .right, .top, .bottom {
+  background: rgba(255,255,255,0.1);
+}
+

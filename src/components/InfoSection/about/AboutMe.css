@@ -1,0 +1,422 @@
+
+.aboutpage *{
+  margin: revert;
+  padding: revert;
+  box-sizing: revert;
+}
+/* =========================
+   About Page Container
+========================= */
+.aboutpage {
+  width: 100%;
+  background-color: #f7f7f5;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   About Me Title
+========================= */
+.aboutme {
+  width: 60%;
+  padding-left: 5vw;
+  text-align: left;
+  font-size: 2vw;
+  position: relative;
+}
+
+.aboutme h3 {
+  position: relative;
+  display: inline-block;
+}
+
+.aboutme h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: #9055ff;
+  animation: underlineGrow 1s ease forwards;
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* =========================
+   Profile Header
+========================= */
+.profile-header {
+  width: 60%;
+  height: 18vw;
+  border-bottom: 2px solid #9055ff;
+  border-top: 2px solid #9055ff;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   Profile Image & Avatar
+========================= */
+.profile-img {
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.ellipses-wrapper {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+.avatar-wrapper {
+  position: absolute;
+  top: 10%;
+  left: 12%;
+}
+
+.avatar-img {
+  --s: 10vw;
+  --c1: #003cc5;
+  --c2: #FEC5FB;
+  --b: 5px;
+  --f: 1;
+
+  --bgoption: content-box no-repeat center / calc(100% / var(--f));
+
+  transform: scale(var(--f));
+  width: var(--s);
+  height: var(--s);
+
+  cursor: pointer;
+  transition: 0.5s;
+
+  background: radial-gradient(
+      circle closest-side,
+      #ffcac9,
+      #737dfe calc(99% - var(--b)),
+      var(--c1) calc(100% - var(--b)) 100%,
+      transparent
+    )
+    var(--bgoption);
+
+  outline: var(--b) solid var(--c1);
+  border-radius: 0 0 999px 999px;
+
+  outline-offset: calc((1 / var(--f) - 1) * var(--s) / 2 - var(--b));
+  padding-top: calc(var(--s) / 5);
+
+  mask: linear-gradient(#000 0 0) no-repeat 50%
+      calc(10px - (1 / var(--f) - 1) * var(--s) / 2 - var(--b)) /
+      calc(100% / var(--f) - 3 * var(--b)) 50%,
+    radial-gradient(circle closest-side, #000 99%, transparent) var(--bgoption);
+}
+
+.avatar-img:hover {
+  --f: 1.38;
+}
+
+/* =========================
+   Ellipses Animation
+========================= */
+.ellipses-container {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.ellipses {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.ellipses__outer--thin {
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-color: rgba(9, 56, 62, 0.1);
+  animation: ellipsesOrbit 15s ease-in-out infinite;
+  position: relative;
+}
+
+.ellipses__outer--thin::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.15;
+}
+
+.ellipses__outer--thick {
+  width: 99.5%;
+  height: 99.5%;
+  border-color: #09383e transparent;
+  border-width: 2px;
+  transform: rotate(-45deg);
+  animation: ellipsesRotate 15s ease-in-out infinite;
+}
+
+.ellipses__orbit {
+  width: 2vw;
+  height: 2vw;
+  border-width: 2px;
+  border-color: #09383e;
+  top: 11vw;
+  right: 6.75vw;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ellipses__orbit::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #09383e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes ellipsesRotate {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+
+@keyframes ellipsesOrbit {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   Profile Message
+========================= */
+.profile-msg {
+  width: 40%;
+  height: 100%;
+  border-left: 1px solid #9055ff;
+  margin-left: 1vw;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4vh;
+}
+
+.profile-name {
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.8vw;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease;
+}
+
+.profile-name:hover {
+  color: #9055ff;
+  transform: translateY(-2px);
+}
+
+.profile-contact {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2vw;
+  color: #666;
+}
+
+.contact-item {
+  transition: all 0.25s ease;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #555;
+  position: relative;
+}
+
+.contact-link:hover {
+  color: #9055ff;
+}
+
+.contact-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: #9055ff;
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   Plane SVG
+========================= */
+.planesvg {
+  width: 30%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   Profile Info Text
+========================= */
+.profile-info {
+  width: 60%;
+  box-sizing: border-box;
+  margin-top: 1vw;
+  padding: 24px;
+  border-bottom: 4px solid #003cc5;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-text {
+  color: #222;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.info-footer {
+  font-style: italic;
+  color: #555;
+  padding-left: 12px;
+  border-left: 4px solid #003cc5;
+}
+
+/* =========================
+   Responsive Adjustments: Profile & Info
+========================= */
+
+/* 大屏：默认保持原有宽度和布局 */
+@media (max-width: 1200px) {
+  .profile-msg {
+    width: 45%;
+    gap: 2vh;
+  }
+  .profile-name {
+    font-size: 2vw;
+  }
+  .profile-contact {
+    font-size: 1.4vw;
+    gap: 10px;
+  }
+  .planesvg {
+    width: 35%;
+  }
+  .profile-info {
+    width: 55%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-msg {
+    width: 50%;
+    gap: 1.5vh;
+  }
+  .profile-name {
+    font-size: 2.2vw;
+  }
+  .profile-contact {
+    font-size: 1.5vw;
+    gap: 8px;
+  }
+  .planesvg {
+    width: 40%;
+  }
+  .profile-info {
+    width: 60%;
+    padding: 16px;
+  }
+}
+
+/* 平板及小屏布局调整：上下布局、边线改为顶部 */
+@media (max-width: 768px) {
+  .profile-msg {
+    width: 50%;
+    gap: 1.5vh;
+  }
+  .profile-name {
+    font-size: 2.2vw;
+  }
+  .profile-contact {
+    font-size: 1.5vw;
+    gap: 8px;
+  }
+  .planesvg {
+    width: 40%;
+  }
+  .profile-info {
+    width: 60%;
+    padding: 16px;
+  }
+}
+
+/* 手机屏幕微调 */
+@media (max-width: 480px) {
+  .profile-msg {
+    width: 50%;
+    gap: 1.5vh;
+  }
+  .profile-name {
+    font-size: 2.2vw;
+  }
+  .profile-contact {
+    font-size: 1.5vw;
+    gap: 8px;
+  }
+  .planesvg {
+    width: 40%;
+  }
+  .profile-info {
+    width: 60%;
+    padding: 16px;
+  }
+}

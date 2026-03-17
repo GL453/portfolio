@@ -1,0 +1,153 @@
+    /* =========================
+   Layout
+========================= */
+.experience {
+  width: 100%;
+  padding: 6vw 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.experience__container {
+  width: 80%;
+  border-bottom: 2px solid #003cc5;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6vw;
+}
+
+/* =========================
+   Title
+========================= */
+.experience__header {
+  width: 100%;
+}
+
+.experience__title {
+  font-size: 2.2vw;
+  font-weight: 600;
+
+
+  position: relative;
+  display: inline-block;
+}
+
+/* 下划线动画 */
+.experience__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 3px;
+  background: #9055ff;
+
+  animation: underlineGrow 1s ease forwards;
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* =========================
+   Item Layout
+========================= */
+.experience__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4vw;
+}
+
+
+/* =========================
+   Text Content
+========================= */
+.experience__content {
+  width: 40%;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  border-top: 4px solid #9055ff;
+  border-left: 4px solid #003cc5;
+}
+.experience__displayffh{
+  padding-bottom: 2rem;
+  
+  border-top: none;
+  border-left: none;
+  border-bottom: 4px solid #9055ff;
+  border-right: 4px solid #003cc5;
+}
+.experience__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+.experience__role {
+    padding-left: 1rem;
+    border-left: 4px solid #9055ff;
+  font-size: 1.3vw;
+  font-weight: 600;
+}
+
+.experience__company {
+  position: relative;
+  cursor: pointer;
+  color: #777;
+  margin-left: 0.5vw;
+  transition: color 0.3s ease;
+}
+
+/* 下划线 */
+.experience__company::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+
+  width: 0;
+  height: 2px;
+  background: #9055ff;
+
+  transition: width 0.3s ease;
+}
+
+.experience__company:hover {
+  color: #9055ff;
+}
+
+/* hover 动画展开 */
+.experience__company:hover::after {
+  width: 100%;
+}
+
+.experience__date {
+    cursor: pointer;
+  font-size: 0.9vw;
+  color: #999;
+}
+.experience__date:hover{
+    color: #003cc5;
+}
+.experience__desc {
+  padding-left: 1.2vw;
+  font-size: 0.95vw;
+  line-height: 1.6;
+}
+
+/* =========================
+   Display Area（重点优化）
+========================= */
+.experience__display {
+  width: 60%;
+  height: 45vh;
+  
+}
