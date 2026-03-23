@@ -119,42 +119,42 @@ export default function CylinderCarousel() {
 
           <div className="card">
             <div className="face front">
-              <img src="./images/portfolio/portfolio1.png" alt="" />
+              <img src="./images/portfolio/portfolio1.png" alt="portfolio" loading="lazy" />
             </div>
             <div className="face back">Portfolio</div>
           </div>
 
           <div className="card">
             <div className="face front">
-              <img src="./images/portfolio/portfolio2.png" alt="" />
+              <img src="./images/portfolio/portfolio2.png" alt="portfolio" loading="lazy" />
             </div>
             <div className="face back">Portfolio</div>
           </div>
 
           <div className="card">
             <div className="face front">
-              <img src="./images/portfolio/portfolio3.png" alt="" />
+              <img src="./images/portfolio/portfolio3.png" alt="portfolio" loading="lazy"/>
             </div>
             <div className="face back">Portfolio</div>
           </div>
 
           <div className="card">
             <div className="face front">
-              <img src="./images/portfolio/portfolio4.png" alt="" />
+              <img src="./images/portfolio/portfolio4.png" alt="portfolio" loading="lazy"/>
             </div>
             <div className="face back">Portfolio</div>
           </div>
 
           <div className="card">
             <div className="face front">
-              <img src="./images/portfolio/portfolio5.png" alt="" />
+              <img src="./images/portfolio/portfolio5.png" alt="portfolio" loading="lazy"/>
             </div>
             <div className="face back">Portfolio</div>
           </div>
 
           <div className="card">
             <div className="face front">
-              <img src="./images/portfolio/portfolio6.png" alt="" />
+              <img src="./images/portfolio/portfolio6.png" alt="portfolio" loading="lazy"/>
             </div>
             <div className="face back">Portfolio</div>
           </div>

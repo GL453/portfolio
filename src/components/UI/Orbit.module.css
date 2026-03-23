@@ -1,0 +1,137 @@
+/* Orbit.module.css */
+.startsec {
+  position: relative;
+  overflow: hidden;
+  background-color: #f7f7f5;
+}
+
+.container {
+  width: 80vw;
+  height: 100vh;
+  /* border: 1px solid; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* ===== 通用轨道样式 ===== */
+.orbit {
+ 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: spin linear infinite;
+}
+
+/* ===== 外层 ===== */
+.outer {
+  --w: 40vw;
+  --dotw: calc(var(--w) / 10);
+  width: var(--w);
+  height: var(--w);
+  animation: spin 72s linear infinite;
+}
+
+/* ===== 中层 ===== */
+.middle {
+  --mw: 30vw;
+  width: var(--mw);
+  height: var(--mw);
+  animation: spin 64s linear infinite;
+}
+
+/* ===== 内层 ===== */
+.inner {
+  --iw: 20vw;
+  width: var(--iw);
+  height: var(--iw);
+  animation: spin 42s linear infinite;
+}
+
+/* ===== 通用 dot ===== */
+.dot {
+  width: var(--dotw);
+  height: var(--dotw);
+  position: absolute;
+  top: calc(var(--dotw) / -2);
+  will-change: transform;
+}
+
+/* 分别控制不同轨道的定位 */
+.outer .dot {
+  left: calc((var(--w) - var(--dotw)) / 2);
+  transform-origin: center calc((var(--w) + var(--dotw)) / 2);
+}
+
+.middle .dot {
+  left: calc((var(--mw) - var(--dotw)) / 2);
+  transform-origin: center calc((var(--mw) + var(--dotw)) / 2);
+}
+
+.inner .dot {
+  left: calc((var(--iw) - var(--dotw)) / 2);
+  transform-origin: center calc((var(--iw) + var(--dotw)) / 2);
+}
+
+/* 飞机图标 */
+.dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/favicon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(60deg);
+}
+
+/* 旋转动画 */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(180deg); }
+  60% { transform: rotate(360deg); }
+  90% { transform: rotate(300deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* 按钮与轨道组合容器 */
+.btn-orbit-wrapper {
+  width: 18vw;
+  height: 18vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  /* border: 1px solid red; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   z-index: 100;
+}
+
+/* 控制轨道显示隐藏 */
+.orbit-wrapper {
+  /* position: absolute; */
+  /* border: 1px solid red; */
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+  
+}
+
+.orbit-wrapper.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+

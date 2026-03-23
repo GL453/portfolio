@@ -149,12 +149,12 @@ export default function Carousel3D() {
       <div className="carousel3d__drag" ref={dragRef}>
         <div className="carousel3d__spin" ref={spinRef}>
 
-          <img src="./images/works/1H_Individual-Logo.png" alt="Logo" />
-          <img src="./images/works/2H_Business_Cover.jpg" alt="Logo" />
-          <img src="./images/works/3H_Individual_Cover.jpg" alt="Logo" />
-          <img src="./images/works/8H_Business-Logo.png" alt="Logo" />
-          <img src="./images/works/OptionA-Creator_Membership.jpg" alt="" />
-          <img src="./images/works/OptionB(Plus)-Business_Membership.png" alt="Logo" />
+          <img src="./images/works/1H_Individual-Logo.png" alt="Logo" loading="lazy"/>
+          <img src="./images/works/2H_Business_Cover.jpg" alt="Logo" loading="lazy"/>
+          <img src="./images/works/3H_Individual_Cover.jpg" alt="Logo" loading="lazy"/>
+          <img src="./images/works/8H_Business-Logo.png" alt="Logo" loading="lazy"/>
+          <img src="./images/works/OptionA-Creator_Membership.jpg" alt="Logo" loading="lazy"/>
+          <img src="./images/works/OptionB(Plus)-Business_Membership.png" alt="Logo" loading="lazy"/>
 
           <p className="carousel3d__title">Some works from the series</p>
 
