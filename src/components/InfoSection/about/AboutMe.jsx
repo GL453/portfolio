@@ -46,7 +46,7 @@ export default function AboutPage() {
           </div>
           {/* header img */}
           <div className="avatar-wrapper">
-            <img className="avatar-img" src="/images/header.png" alt="header" />
+            <img className="avatar-img" src="./images/header.png" alt="header" />
           </div>
         </div>
 
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
         {/* plane svg */}
         <div className="planesvg">
-          <img src="/favicon.svg" alt="plane" />
+          <img src="./favicon.svg" alt="plane" />
         </div>
       </div>
 

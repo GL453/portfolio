@@ -57,7 +57,7 @@ export default function EduSection() {
     const textureLoader = new THREE.TextureLoader();
     const planeGeo = new THREE.PlaneGeometry(CONFIG.pWidth, CONFIG.pHeight);
 
-    const images = ["/images/middlesex.jpg", "/images/nanjing.png"];
+    const images = ["./images/middlesex.jpg", "./images/nanjing.png"];
     const paintingGroups = [];
 
     for (let i = 0; i < CONFIG.slideCount; i++) {
