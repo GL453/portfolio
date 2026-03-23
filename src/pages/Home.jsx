@@ -4,7 +4,7 @@ import PlaneFlight from "../components/PlaneFlight/PlaneFlight"
 import OpeningAnimation from "../components/OpeningSection/OpeningAnimation"
 import PlaneEnter from "../components/PlaneEnter/PlaneEnter"
 
-export default function Home() {
+export default function HomePage() {
   const [showLoading, setShowLoading] = useState(true)
   const [fadeOutLoading, setFadeOutLoading] = useState(false)
   const [showPlane, setShowPlane] = useState(false)

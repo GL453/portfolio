@@ -9,9 +9,9 @@ import PageEducation from "../components/InfoSection/education/Education";
 import PageExperience from "../components/InfoSection/experience/Exp/Experience";
 import PageSkills from "../components/InfoSection/skill/Skills";
 
-export default function Home() {
+export default function InfoPage() {
   const [activeIndex, setActiveIndex] = useState(null);
-  const [specialClicked, setSpecialClicked] = useState(false); // 👈 点击状态
+  const [specialClicked, setSpecialClicked] = useState(false); 
   const navigate = useNavigate();
 
   const planes = [

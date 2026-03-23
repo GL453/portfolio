@@ -11,7 +11,6 @@ export default function App() {
       <Route path="/info" element={<Info />} />
       <Route path="/end" element={<End />} /> 
       <Route path="/record" element={<Record />} /> 
-
     </Routes>
   );
 }
